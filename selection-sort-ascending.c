@@ -4,8 +4,8 @@ int main()
 {
 
     int n;
-
     scanf("%d", &n);
+
     int a[n];
 
     for (int i = 0; i < n; i++)
@@ -15,22 +15,15 @@ int main()
 
     for (int i = 0; i < n - 1; i++)
     {
+
         for (int j = i + 1; j < n; j++)
         {
-            // Ascending Order
             if (a[i] > a[j])
             {
-                int temp = a[i];
-                a[i] = a[j];
-                a[j] = temp;
+                int temp = a[j];
+                a[j] = a[i];
+                a[i] = temp;
             }
-
-            // Descending Order
-            // {
-            //     int temp = a[i];
-            //     a[i] = a[j];
-            //     a[j] = temp;
-            // }
         }
     }
 
